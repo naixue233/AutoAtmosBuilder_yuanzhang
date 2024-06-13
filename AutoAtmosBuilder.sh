@@ -364,6 +364,13 @@ else
     mv JKSV.nro ./switch
 fi
 
+curl -sL https://raw.github.com/naixue233/naixue_nx_atm_Auto_Script/main/resources/linkalho.nro -o linkalho.nro
+if [ $? -ne 0 ]; then
+    echo "linkalho.nro download\033[31m failed\033[0m."
+else
+    echo "linkalho.nro download\033[32m success\033[0m."
+fi
+
 ### Fetch lastest tencent-switcher-gui from https://github.com/CaiMiao/Tencent-switcher-GUI/releases/latest
 # curl -sL https://api.github.com/repos/CaiMiao/Tencent-switcher-GUI/releases/latest \
 #   | jq '.tag_name' \
