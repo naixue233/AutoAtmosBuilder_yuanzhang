@@ -810,6 +810,9 @@ Zing
 sys-patch
 ENDOFFILE
 
+### Delete reboot_to_payload.nro & reboot_to_hekate.nro
+rm switch/reboot_to_payload.nro
+rm switch/sys-clk-manager.nro
 # -------------------------------------------
 
 echo ""
