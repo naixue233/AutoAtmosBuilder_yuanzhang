@@ -691,6 +691,7 @@ Tinfoil-17v3
 ovlloader
 ovlmenu
 ovl-sysmodules
+linkalho
 EdiZon
 StatusMonitor
 sys-clk
