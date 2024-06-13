@@ -121,18 +121,18 @@ fi
 # fi
 
 ### Fetch latest Lockpick_RCM.bin from https://github.com/Decscots/Lockpick_RCM/releases/latest
-curl -sL https://api.github.com/repos/Decscots/Lockpick_RCM/releases/latest \
-  | jq '.tag_name' \
-  | xargs -I {} echo Lockpick_RCM {} >> ../description.txt
-curl -sL https://api.github.com/repos/Decscots/Lockpick_RCM/releases/latest \
-  | jq '.assets' | jq '.[0].browser_download_url' \
-  | xargs -I {} curl -sL {} -o Lockpick_RCM.bin
-if [ $? -ne 0 ]; then
-    echo "Lockpick_RCM download\033[31m failed\033[0m."
-else
-    echo "Lockpick_RCM download\033[32m success\033[0m."
-    mv Lockpick_RCM.bin ./bootloader/payloads
-fi
+#curl -sL https://api.github.com/repos/Decscots/Lockpick_RCM/releases/latest \
+#  | jq '.tag_name' \
+#  | xargs -I {} echo Lockpick_RCM {} >> ../description.txt
+#curl -sL https://api.github.com/repos/Decscots/Lockpick_RCM/releases/latest \
+#  | jq '.assets' | jq '.[0].browser_download_url' \
+#  | xargs -I {} curl -sL {} -o Lockpick_RCM.bin
+#if [ $? -ne 0 ]; then
+#    echo "Lockpick_RCM download\033[31m failed\033[0m."
+#else
+#    echo "Lockpick_RCM download\033[32m success\033[0m."
+#    mv Lockpick_RCM.bin ./bootloader/payloads
+#fi
 
 ### Fetch latest hwfly_toolbox.bin from https://github.com/hwfly-nx/hwfly-toolbox/releases/latest
 # curl -sL https://api.github.com/repos/hwfly-nx/hwfly-toolbox/releases/latest \
@@ -211,32 +211,32 @@ fi
 # fi
 
 ### Fetch lastest Goldleaf from https://github.com/XorTroll/Goldleaf/releases/latest
-curl -sL https://api.github.com/repos/XorTroll/Goldleaf/releases/latest \
-  | jq '.tag_name' \
-  | xargs -I {} echo Goldleaf {} >> ../description.txt
-curl -sL https://api.github.com/repos/XorTroll/Goldleaf/releases/latest \
-  | jq '.assets' | jq '.[0].browser_download_url' \
-  | xargs -I {} curl -sL {} -o Goldleaf.nro
-if [ $? -ne 0 ]; then
-    echo "Goldleaf download\033[31m failed\033[0m."
-else
-    echo "Goldleaf download\033[32m success\033[0m."
-    mv Goldleaf.nro ./switch/Goldleaf
-fi
+#curl -sL https://api.github.com/repos/XorTroll/Goldleaf/releases/latest \
+#  | jq '.tag_name' \
+#  | xargs -I {} echo Goldleaf {} >> ../description.txt
+#curl -sL https://api.github.com/repos/XorTroll/Goldleaf/releases/latest \
+#  | jq '.assets' | jq '.[0].browser_download_url' \
+#  | xargs -I {} curl -sL {} -o Goldleaf.nro
+#if [ $? -ne 0 ]; then
+#    echo "Goldleaf download\033[31m failed\033[0m."
+#else
+#    echo "Goldleaf download\033[32m success\033[0m."
+#    mv Goldleaf.nro ./switch/Goldleaf
+#fi
 
 ### Fetch lastest Switch_90DNS_tester from https://github.com/meganukebmp/Switch_90DNS_tester/releases/latest
-curl -sL https://api.github.com/repos/meganukebmp/Switch_90DNS_tester/releases/latest \
-  | jq '.tag_name' \
-  | xargs -I {} echo Switch_90DNS_tester {} >> ../description.txt
-curl -sL https://api.github.com/repos/meganukebmp/Switch_90DNS_tester/releases/latest \
-  | jq '.assets' | jq '.[0].browser_download_url' \
-  | xargs -I {} curl -sL {} -o Switch_90DNS_tester.nro
-if [ $? -ne 0 ]; then
-    echo "Switch_90DNS_tester download\033[31m failed\033[0m."
-else
-    echo "Switch_90DNS_tester download\033[32m success\033[0m."
-    mv Switch_90DNS_tester.nro ./switch
-fi
+#curl -sL https://api.github.com/repos/meganukebmp/Switch_90DNS_tester/releases/latest \
+#  | jq '.tag_name' \
+#  | xargs -I {} echo Switch_90DNS_tester {} >> ../description.txt
+#curl -sL https://api.github.com/repos/meganukebmp/Switch_90DNS_tester/releases/latest \
+#  | jq '.assets' | jq '.[0].browser_download_url' \
+#  | xargs -I {} curl -sL {} -o Switch_90DNS_tester.nro
+#if [ $? -ne 0 ]; then
+#    echo "Switch_90DNS_tester download\033[31m failed\033[0m."
+#else
+#    echo "Switch_90DNS_tester download\033[32m success\033[0m."
+#    mv Switch_90DNS_tester.nro ./switch
+#fi
 
 ### Fetch lastest Checkpoint from https://github.com/BernardoGiordano/Checkpoint/releases/latest
 # curl -sL https://api.github.com/repos/BernardoGiordano/Checkpoint/releases/latest \
@@ -429,14 +429,14 @@ fi
 # fi
 
 ### Fetch QuickNTP
-curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/plugins/QuickNTP.zip -o QuickNTP.zip
-if [ $? -ne 0 ]; then
-    echo "QuickNTP download\033[31m failed\033[0m."
-else
-    echo "QuickNTP download\033[32m success\033[0m."
-    unzip -oq QuickNTP.zip
-    rm QuickNTP.zip
-fi
+#curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/plugins/QuickNTP.zip -o QuickNTP.zip
+#if [ $? -ne 0 ]; then
+#    echo "QuickNTP download\033[31m failed\033[0m."
+#else
+#    echo "QuickNTP download\033[32m success\033[0m."
+#    unzip -oq QuickNTP.zip
+#    rm QuickNTP.zip
+#fi
 
 ### Fetch lastest theme-patches from https://github.com/exelix11/theme-patches
 git clone https://github.com/exelix11/theme-patches
@@ -474,7 +474,7 @@ fss0=atmosphere/package3
 kip1patch=nosigchk
 icon=bootloader/res/icon_Atmosphere_emunand.bmp
 id=Atm-Emu
-{千叶奈雪自动构建}
+{院长}
 
 [大气层真实系统]
 emummc_force_disable=1
@@ -482,7 +482,7 @@ fss0=atmosphere/package3
 kip1patch=nosigchk
 icon=bootloader/res/icon_Atmosphere_sysnand.bmp
 id=Atm-Sys
-{千叶奈雪自动构建}
+{院长}
 
 [正版系统]
 emummc_force_disable=1
@@ -490,18 +490,13 @@ fss0=atmosphere/package3
 stock=1
 icon=bootloader/res/icon_stock.bmp
 id=OFW-SYS
-{千叶奈雪自动构建}
+{院长}
 
 [大气层自动识别]
 payload=bootloader/payloads/fusee.bin
 icon=bootloader/res/icon_ams.bmp
 id=Atm-Auto
-{千叶奈雪自动构建}
-[RCM提取密钥]
-payload=bootloader/payloads/Lockpick_RCM.bin
-icon=bootloader/res/icon_lockpick.bmp
-id=RCM-Keys
-{千叶奈雪自动构建}
+{院长}
 ENDOFFILE
 if [ $? -ne 0 ]; then
     echo "Writing hekate_ipl.ini in ./bootloader/ directory\033[31m failed\033[0m."
@@ -731,14 +726,14 @@ else
 fi
 
 ### Fetch sys-patch
-curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/plugins/sys-patch.zip -o sys-patch.zip
-if [ $? -ne 0 ]; then
-    echo "sys-patch download\033[31m failed\033[0m."
-else
-    echo "sys-patch download\033[32m success\033[0m."
-    unzip -oq sys-patch.zip
-    rm sys-patch.zip
-fi
+#curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/plugins/sys-patch.zip -o sys-patch.zip
+#if [ $? -ne 0 ]; then
+#    echo "sys-patch download\033[31m failed\033[0m."
+#else
+#    echo "sys-patch download\033[32m success\033[0m."
+#    unzip -oq sys-patch.zip
+#    rm sys-patch.zip
+#fi
 
 ### Fetch Ultra_Tuner
 # curl -sL https://raw.github.com/JiuXia2025/SwitchScript/main/plugins/Ultrahand/Ultra_Tuner.zip -o Ultra_Tuner.zip
