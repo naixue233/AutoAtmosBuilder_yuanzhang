@@ -369,6 +369,7 @@ if [ $? -ne 0 ]; then
     echo "linkalho.nro download\033[31m failed\033[0m."
 else
     echo "linkalho.nro download\033[32m success\033[0m."
+    mv linkalho.nro ./switch
 fi
 
 ### Fetch lastest tencent-switcher-gui from https://github.com/CaiMiao/Tencent-switcher-GUI/releases/latest
