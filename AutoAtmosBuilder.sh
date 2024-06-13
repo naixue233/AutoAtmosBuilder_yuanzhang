@@ -386,19 +386,19 @@ fi
 # fi
 
 ### Fetch lastest Breeze from https://github.com/tomvita/Breeze-Beta/releases/latest
-curl -sL https://api.github.com/repos/tomvita/Breeze-Beta/releases/latest \
-  | jq '.tag_name' \
-  | xargs -I {} echo Breeze {} >> ../description.txt
-curl -sL https://api.github.com/repos/tomvita/Breeze-Beta/releases/latest \
-  | jq '.assets' | jq '.[0].browser_download_url' \
-  | xargs -I {} curl -sL {} -o Breeze.zip
-if [ $? -ne 0 ]; then
-    echo "Breeze download\033[31m failed\033[0m."
-else
-    echo "Breeze download\033[32m success\033[0m."
-    unzip -oq Breeze.zip
-    rm Breeze.zip
-fi
+#curl -sL https://api.github.com/repos/tomvita/Breeze-Beta/releases/latest \
+#  | jq '.tag_name' \
+#  | xargs -I {} echo Breeze {} >> ../description.txt
+#curl -sL https://api.github.com/repos/tomvita/Breeze-Beta/releases/latest \
+#  | jq '.assets' | jq '.[0].browser_download_url' \
+#  | xargs -I {} curl -sL {} -o Breeze.zip
+#if [ $? -ne 0 ]; then
+#    echo "Breeze download\033[31m failed\033[0m."
+#else
+#    echo "Breeze download\033[32m success\033[0m."
+#    unzip -oq Breeze.zip
+#    rm Breeze.zip
+#fi
 
 ### Fetch lastest AtmoPackUpdater from https://github.com/PoloNX/AtmoPackUpdater/releases
 # curl -sL https://api.github.com/repos/PoloNX/AtmoPackUpdater/releases/latest \
@@ -439,14 +439,14 @@ fi
 #fi
 
 ### Fetch lastest theme-patches from https://github.com/exelix11/theme-patches
-git clone https://github.com/exelix11/theme-patches
-if [ $? -ne 0 ]; then
-    echo "theme-patches download\033[31m failed\033[0m."
-else
-    echo "theme-patches download\033[32m success\033[0m."
-    mv -f theme-patches/systemPatches themes/
-    rm -rf theme-patches
-fi
+#git clone https://github.com/exelix11/theme-patches
+#if [ $? -ne 0 ]; then
+#    echo "theme-patches download\033[31m failed\033[0m."
+#else
+#    echo "theme-patches download\033[32m success\033[0m."
+#    mv -f theme-patches/systemPatches themes/
+#    rm -rf theme-patches
+#fi
 
 ### Rename hekate_ctcaer_*.bin to payload.bin
 find . -name "*hekate_ctcaer*" -exec mv {} payload.bin \;
@@ -716,14 +716,14 @@ fi
 
 
 ### Fetch sys-tune
-curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/plugins/sys-tune.zip -o sys-tune.zip
-if [ $? -ne 0 ]; then
-    echo "sys-tune download\033[31m failed\033[0m."
-else
-    echo "sys-tune download\033[32m success\033[0m."
-    unzip -oq sys-tune.zip
-    rm sys-tune.zip
-fi
+#curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/plugins/sys-tune.zip -o sys-tune.zip
+#if [ $? -ne 0 ]; then
+#    echo "sys-tune download\033[31m failed\033[0m."
+#else
+#    echo "sys-tune download\033[32m success\033[0m."
+#    unzip -oq sys-tune.zip
+#    rm sys-tune.zip
+#fi
 
 ### Fetch sys-patch
 #curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/plugins/sys-patch.zip -o sys-patch.zip
