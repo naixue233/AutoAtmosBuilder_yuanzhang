@@ -472,7 +472,6 @@ updater2p=1
 [大气层虚拟系统]
 emummcforce=1
 fss0=atmosphere/package3
-kip1patch=nosigchk
 icon=bootloader/res/icon_Atmosphere_emunand.bmp
 id=Atm-Emu
 {院长}
@@ -480,7 +479,6 @@ id=Atm-Emu
 [大气层真实系统]
 emummc_force_disable=1
 fss0=atmosphere/package3
-kip1patch=nosigchk
 icon=bootloader/res/icon_Atmosphere_sysnand.bmp
 id=Atm-Sys
 {院长}
