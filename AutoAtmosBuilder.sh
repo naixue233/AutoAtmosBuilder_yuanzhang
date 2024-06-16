@@ -462,7 +462,7 @@ cat > ./bootloader/hekate_ipl.ini << ENDOFFILE
 [config]
 autoboot=0
 autoboot_list=0
-bootwait=3
+bootwait=2
 verification=1
 backlight=100
 autohosoff=0
@@ -472,6 +472,7 @@ updater2p=1
 [大气层虚拟系统]
 emummcforce=1
 fss0=atmosphere/package3
+kip1=atmosphere/kips/loader.kip
 icon=bootloader/res/icon_Atmosphere_emunand.bmp
 id=Atm-Emu
 {院长}
@@ -479,6 +480,7 @@ id=Atm-Emu
 [大气层真实系统]
 emummc_force_disable=1
 fss0=atmosphere/package3
+kip1=atmosphere/kips/loader.kip
 icon=bootloader/res/icon_Atmosphere_sysnand.bmp
 id=Atm-Sys
 {院长}
